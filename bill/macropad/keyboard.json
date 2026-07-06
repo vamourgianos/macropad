@@ -1,0 +1,120 @@
+{
+    "keyboard_name": "MacroPad",
+    "manufacturer": "BILL'S",
+    "maintainer": "bill",
+    "bootloader_instructions": "Hold the encoder button while plugging the keyboard",
+    "board": "STM32_F103_STM32DUINO",
+    "bootloader": "stm32duino",
+    "processor": "STM32F103",
+    "features": {
+        "encoder": true,
+        "via": true,
+        "extrakey":true,
+        "backlight": true,
+        "console": true
+    },
+    "build": {
+        "lto": true
+    },
+    "backlight" :{
+        "breathing": true,
+        "default": {
+            "on": true,
+            "breathing": true
+        },
+        "levels": 15,
+        "on_state": 0,
+        "pin": "A8"
+    },
+    "bootmagic": {
+        "enabled": true,
+        "matrix": [0,0]
+    },
+    "eeprom": {
+        "driver": "wear_leveling",
+        "wear_leveling": {
+            "driver": "embedded_flash",
+            "backing_size": 16384,
+            "logical_size": 8192
+        }
+    },
+    "encoder": {
+        "rotary": [{
+            "pin_a": "A6",
+            "pin_b": "A7",
+            "resolution": 4
+        }]
+    },
+    "keycodes": [
+        {"key": "ENC_BTN",     "label": "Cycle Encoder Mode", "aliases": ["ENCMOD"]},
+        {"key": "ENC_MACRO_A", "label": "Encoder A Macro",    "aliases": ["ENCMACA"]},
+        {"key": "ENC_MACRO_B", "label": "Encoder B Macro",    "aliases": ["ENCMACB"]},
+        {"key": "MACRO_00",    "label": "Macro 0",            "aliases": ["MACRO00"]},
+        {"key": "MACRO_01",    "label": "Macro 1",            "aliases": ["MACRO01"]},
+        {"key": "MACRO_02",    "label": "Macro 2",            "aliases": ["MACRO02"]},
+        {"key": "MACRO_03",    "label": "Macro 3",            "aliases": ["MACRO03"]},
+        {"key": "MACRO_04",    "label": "Macro 4",            "aliases": ["MACRO04"]},
+        {"key": "MACRO_05",    "label": "Macro 5",            "aliases": ["MACRO05"]},
+        {"key": "MACRO_06",    "label": "Macro 6",            "aliases": ["MACRO06"]},
+        {"key": "MACRO_07",    "label": "Macro 7",            "aliases": ["MACRO07"]},
+        {"key": "MACRO_08",    "label": "Macro 8",            "aliases": ["MACRO08"]},
+        {"key": "MACRO_09",    "label": "Macro 9",            "aliases": ["MACRO09"]},
+        {"key": "MACRO_10",    "label": "Macro 10",           "aliases": ["MACRO10"]},
+        {"key": "MACRO_11",    "label": "Macro 11",           "aliases": ["MACRO11"]},
+        {"key": "MACRO_12",    "label": "Macro 12",           "aliases": ["MACRO12"]},
+        {"key": "MACRO_13",    "label": "Macro 13",           "aliases": ["MACRO13"]},
+        {"key": "MACRO_14",    "label": "Macro 14",           "aliases": ["MACRO14"]},
+        {"key": "MACRO_15",    "label": "Macro 15",           "aliases": ["MACRO15"]},
+        {"key": "MACRO_16",    "label": "Macro 16",           "aliases": ["MACRO16"]},
+        {"key": "MACRO_17",    "label": "Macro 17",           "aliases": ["MACRO17"]},
+        {"key": "MACRO_18",    "label": "Macro 18",           "aliases": ["MACRO18"]},
+        {"key": "MACRO_19",    "label": "Macro 19",           "aliases": ["MACRO19"]}
+    ],
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {"matrix": [0, 0], "x": 0, "y": 0},
+                {"matrix": [0, 1], "x": 1, "y": 0},
+                {"matrix": [0, 2], "x": 2, "y": 0},
+                {"matrix": [0, 3], "x": 3, "y": 0},
+                {"matrix": [0, 4], "x": 4, "y": 0},
+
+                {"matrix": [1, 0], "x": 0, "y": 1},
+                {"matrix": [1, 1], "x": 1, "y": 1},
+                {"matrix": [1, 2], "x": 2, "y": 1},
+                {"matrix": [1, 3], "x": 3, "y": 1},
+                {"matrix": [1, 4], "x": 4, "y": 1},
+
+                {"matrix": [2, 0], "x": 0, "y": 2},
+                {"matrix": [2, 1], "x": 1, "y": 2},
+                {"matrix": [2, 2], "x": 2, "y": 2},
+                {"matrix": [2, 3], "x": 3, "y": 2},
+                {"matrix": [2, 4], "x": 4, "y": 2},
+
+                {"matrix": [3, 0], "x": 0, "y": 3},
+                {"matrix": [3, 1], "x": 1, "y": 3},
+                {"matrix": [3, 2], "x": 2, "y": 3},
+                {"matrix": [3, 3], "x": 3, "y": 3},
+                {"matrix": [3, 4], "x": 4, "y": 3},
+
+                {"matrix": [0, 5], "x": 3, "y": 4, "encoder": 0}
+            ]
+        }
+    },
+    "dynamic_keymap": {
+        "layer_count": 1
+    },
+    "debounce": 5,
+    "diode_direction": "COL2ROW",
+    "matrix_pins": {
+        "ghost": true,
+        "masked": true,
+        "rows": [ "A5", "A15", "B3", "B4"],
+        "cols": [ "B5",  "B6", "B7", "B8", "B9", "B0"]
+    },
+    "usb": {
+        "device_version": "0.0.1",
+        "pid": "0xB00B",
+        "vid": "0xFEED"
+    }
+}
